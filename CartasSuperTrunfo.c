@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Desafio: Nivel Novato
+/* Desafio: Nivel Aventureiro
 Tema 1 - Super Trunfo
 Cadastrar cartas com informações sobre as cidades.
 */
@@ -14,6 +14,8 @@ int main(){
     float area1, area2;
     float pib1, pib2; 
     int pontosturisticos1, pontosturisticos2;
+    float densidade1, densidade2;
+    float pibpercapita1, pibpercapita2;
 
     //Entrada de dados para a primeira carta
     printf("\n Cadastrando a Carta 1, digite as informações abaixo:\n");
@@ -61,7 +63,7 @@ int main(){
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosturisticos2);
 
-    // Saída de dados da carta 1
+    // Saída de dados da cartas 1
     printf("\n Carta 01: \n");
     printf("Estado: %c \n", estado1);
     printf("Código: %s \n", codcarta1);
@@ -71,7 +73,13 @@ int main(){
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticos1);
 
-    // Saída de dados da carta 2
+    //Exibindo informações adicionais da Carta 1
+    densidade1 = (float) populacao1 / area1;
+    printf("Densidade Populacional: %.2f hab/km² \n", densidade1);
+    pibpercapita1 = (float) pib1 * 1000000000 / populacao1;
+    printf("Pib per Capita: %.2f reais \n", pibpercapita1);
+
+    // Saída de dados da cartas 2
     printf("\n Carta 02: \n");
     printf("Estado: %c \n", estado2);
     printf("Código: %s \n", codcarta2);
@@ -81,6 +89,13 @@ int main(){
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Turísticos: %d \n", pontosturisticos2);
 
+    //Exibindo informações adicionais da Carta 2
+    densidade2 = (float) populacao2 / area2;
+    printf("Densidade Populacional: %.2f hab/km² \n", densidade2);
+    pibpercapita2 = (float) pib2 * 1000000000 / populacao2;
+    printf("Pib per Capita: %.2f reais \n", pibpercapita2);
+
     return 0;
+
 
 }
